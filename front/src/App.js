@@ -6,13 +6,14 @@ import Registration from './pages/registration';
 import Login from './pages/login';
 import Cookie from './pages/coocie';
 import Page404 from './pages/404';
+import Home from './pages/home';
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
   
   const headers = [
-    {id:1,link:'home',title:'Главная'},
+    {id:1,link:'',title:'Главная'},
     {id:1,link:'login',title:'Логин'},
     {id:1,link:'registration',title:'Регисстрация'},
     {id:2,link:'home2',title:'Контакты'},
@@ -38,6 +39,7 @@ function App() {
 
     <div className="content">
       <Routes>
+        <Route path='' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/registration' element={<Registration/>}/>
         <Route path='*' element={<Page404/>}/>
