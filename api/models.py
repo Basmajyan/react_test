@@ -3,8 +3,7 @@ from turtle import title
 from unicodedata import category
 from django.db import models
 
-
-class Todos(models.Model):
+class Todo(models.Model):
     user = models.CharField(verbose_name="Author", max_length=80)
     title = models.CharField(verbose_name="Title", max_length=50)
     description = models.TextField(verbose_name="Description")

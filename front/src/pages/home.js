@@ -2,6 +2,9 @@ import React from "react";
 
 
 export default function Home(args){
+    React.useEffect(() => {
+        document.title = 'Home';
+    });
     return(
         <>
         <div className="registrationDiv">
